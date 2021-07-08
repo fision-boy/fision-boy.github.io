@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="请输入用户名" /><br>
+    <span id="v-username"></span><br>
+    <input type="password" id="password" placeholder="请输入密码"><br>
+    <span id="v-password"></span><br>
+    <button id='btn'>注册</button>
+</body>
+<script>
+    var usernameInput = document.querySelector('#username');
+    var passwordInput = document.querySelector('#password');
+    var vUsername = document.querySelector('#v-username');
+    var vPassword = document.querySelector('#v-password');
+    var btn = document.querySelector('#btn');
+    btn.onclick = function () {
+        checkPassword();
+        checkUsername();
+    }
+    usernameInput.onblur = function () {
+        checkUsername();
+    }
+    passwordInput.onblur = function () {
+        checkPassword();
+    }
+    function checkUsername() {
+        var username = usernameInput.value;
+        if (!username) {
+            vUsername.innerText = '用户名不可用';
+            vUsername.style.color = 'red';
+        } else {
+            vUsername.innerText = '用户名可用';
+            vUsername.style.color = 'green';
+        }
+    }
+    function checkPassword() {
+        var password = passwordInput.value;
+        if (password.length < 6) {
+            vPassword.innerText = '密码不能小于六位';
+            vPassword.style.color = 'red';
+        } else {
+            vPassword.innerText = '密码正确';
+            vPassword.style.color = 'green';
+        }
+    }
+
+
+</script>
+
+</html>
