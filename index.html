@@ -1,58 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>陈彦斌调查问卷</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
+<style>
+    .go{
+        text-align: center;
+    }
+    .w{
+        width: 50px;
+        height: 50px;
+    }
+    .ww{
+        height: 30px;
+        width: 300px;
+    }
+    .www{
+        width: 50px;
+    }
+</style>
 <body>
-    <input type="text" id="username" placeholder="请输入用户名" /><br>
-    <span id="v-username"></span><br>
-    <input type="password" id="password" placeholder="请输入密码"><br>
-    <span id="v-password"></span><br>
-    <button id='btn'>注册</button>
+    <form action="mailto:123550113@qq.com">
+        <table class="go">
+    <tr>
+        <td>
+        <h2>陈彦斌调查问卷</h2>
+    </td>
+    </tr>
+
+        <tr>
+            <td>陈彦斌的爱好？</td>
+        </tr>
+        <tr>
+            <td class="w"><input type="text" class="ww"></td>
+        </tr>
+        <tr>
+            <td>陈彦斌的性格？</td>
+        </tr>
+        <tr>
+            <td class="w"><input type="text" class="ww"></td>
+        </tr>
+        <tr>
+            <td >陈彦斌的宿舍号？</td>
+        </tr>
+        <tr>
+            <td class="w">
+                <input type="radio" value="8121">8121
+                <input type="radio" value="8122">8122
+                <input type="radio" value="8123">8123
+                <input type="radio" value="8124">8124
+            </td>
+        </tr>
+        <tr>
+            <td>陈彦斌喜欢的歌星？</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" value="周杰伦">周杰伦
+                <input type="radio" value="林俊杰">林俊杰
+                <input type="radio" value="许嵩">许嵩
+                <input type="radio" value="陈奕迅">陈奕迅
+            </td>
+        </tr>
+        <tr>
+            <td>陈彦斌最喜欢的粤语歌（最）？</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" value="十面埋伏">十面埋伏
+                <input type="radio" value="浮夸">浮夸
+                <input type="radio" value="防不胜防">防不胜防
+                <input type="radio" value="打回原形">打回原形
+            </td>
+        </tr>
+        <tr>
+            <td>对陈彦斌的建议（必须填）</td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="" id="" cols="20" rows="10" required></textarea>
+            </td>
+        </tr>
+        <tr >
+            <td class="w">
+                <input type="submit">
+                <input type="reset">
+            </td>
+        </tr>
+
+
+
+
+
+</table>
+</form>
 </body>
-<script>
-    var usernameInput = document.querySelector('#username');
-    var passwordInput = document.querySelector('#password');
-    var vUsername = document.querySelector('#v-username');
-    var vPassword = document.querySelector('#v-password');
-    var btn = document.querySelector('#btn');
-    btn.onclick = function () {
-        checkPassword();
-        checkUsername();
-    }
-    usernameInput.onblur = function () {
-        checkUsername();
-    }
-    passwordInput.onblur = function () {
-        checkPassword();
-    }
-    function checkUsername() {
-        var username = usernameInput.value;
-        if (!username) {
-            vUsername.innerText = '用户名不可用';
-            vUsername.style.color = 'red';
-        } else {
-            vUsername.innerText = '用户名可用';
-            vUsername.style.color = 'green';
-        }
-    }
-    function checkPassword() {
-        var password = passwordInput.value;
-        if (password.length < 6) {
-            vPassword.innerText = '密码不能小于六位';
-            vPassword.style.color = 'red';
-        } else {
-            vPassword.innerText = '密码正确';
-            vPassword.style.color = 'green';
-        }
-    }
-
-
-</script>
-
 </html>
